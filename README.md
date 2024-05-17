@@ -11,6 +11,7 @@ contract ReyesLoanManager {
         owner = msg.sender;
         loanBalances[address(this)] = 50000;
     }
+# SMC-ETH-AVAX
 
     // Function to reduce contract's loan balance
     function payBackLoan(uint256 amount) public {
