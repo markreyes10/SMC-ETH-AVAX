@@ -30,7 +30,8 @@ This allows the contract owner to borrow additional funds. They need to send the
     function checkLoanBalance() public view returns (uint256) {
         return loanBalances[address(this)];
     }
-The borrow function allows the contract owner to increase the loan balance. This function includes an ownership check to ensure that only the owner can borrow additional funds.
+The borrow function allows the contract owner to increase the loan balance.
+- This function includes an ownership check to ensure that only the owner can borrow additional funds.
     // Function to increase contract's loan balance
     function borrow(uint256 amount) public {
         require(msg.sender == owner, "Only the owner can borrow from the contract");
