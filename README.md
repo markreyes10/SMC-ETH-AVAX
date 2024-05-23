@@ -9,6 +9,9 @@ contract ReyesLoanManager {
     
 # Getting Started
 constractor that shows the contract owner and initializes the initial loan balance upon contract deployment. 
+Upon deployment, the contract performs the following initializations:
+- Set Contract Owner: The contract assigns the deploying address (msg.sender) as the owner.
+- Initialize Loan Balance: It sets an initial loan balance of 50,000 units for the contract itself.
     // Constructor: Set contract owner and initial loan balance
     constructor() {
         owner = msg.sender;
